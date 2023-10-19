@@ -1,0 +1,9 @@
+<img (click)="openMenu()" *ngIf="isMobile()" class="menu_mobile" src="assets/img/menu_mobile.png">
+<app-header class="mobileRelative" id="header"></app-header>
+<app-menu class="menu"></app-menu>
+<app-introduction class="introContainer" id="intro"></app-introduction>
+<app-skills class="skillsContainer" id="my-skills"></app-skills>
+<app-my-works class="myWorks" id="my-works"></app-my-works>
+<app-contact id="contact"></app-contact>
+<app-footer class="footer"></app-footer>
+<app-menu-mobile [ngClass]="menuOpen ? 'dialog' : 'displayNone'"></app-menu-mobile>

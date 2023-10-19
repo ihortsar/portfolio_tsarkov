@@ -1,0 +1,36 @@
+<header>
+    <div>
+        <div class="textDiv">
+            <h1>My works</h1>
+            <div>
+                <p>This page is the samples of my work.<br> Feel free to try them out</p>
+            </div>
+        </div>
+        <img class="smallerEllipse" src="assets/img/Ellipse 9.png">
+
+    </div>
+    <img class="biggerEllipse" src="assets/img/Ellipse 9.png">
+</header>
+<div class="projectContainer">
+    <img class="backgroundEllipseMiddle" src="assets/img/Ellipse 9.png">
+    <img class="backgroundEllipseBig" src="assets/img/Ellipse 9.png">
+    <div *ngFor="let project of projects" class="project">
+        <div>
+            <a href="{{project.projectsLink}}" target="_blank"><img
+                    src="assets/img/{{ project.projectsScreenshot}}"></a>
+        </div>
+        <div>
+            <h1>{{ project.projectsName}}</h1>
+            <h2>{{ project.projectsLanguages}}</h2>
+            <h3>
+                {{ project.projectsDescription}}
+            </h3>
+            <div class="buttons">
+                <a href="{{project.gitLink }}" target="_blank"><button>Github</button></a>
+                <a *ngIf="isMobileDevice"  href="{{project.projectsLink }}"
+                    target="_blank"><button style="width: 80%;">Live Test</button></a>
+            </div>
+        </div>
+    </div>
+
+</div>

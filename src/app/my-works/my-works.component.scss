@@ -1,0 +1,307 @@
+.buttons {
+    display: flex;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+
+
+    h1 {
+        color: var(--style-2-green, #57E8A2);
+        font-family: 'Baloo 2', sans-serif;
+        font-size: 96px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 100%;
+        margin-bottom: 15px;
+        letter-spacing: 0.96px;
+    }
+
+    p {
+        color: var(--Black, #000);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+    }
+
+    div {
+        display: flex;
+    }
+
+
+    .biggerEllipse {
+        height: 190px;
+        margin-top: 20%;
+        margin-right: 250px;
+    }
+
+    .smallerEllipse {
+        height: 90px;
+        margin-top: 50px;
+        margin-left: 100px;
+    }
+}
+
+a {
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.textDiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.project:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.projectContainer {
+    position: relative;
+}
+
+.project {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+
+    button {
+        display: flex;
+        padding: 15px 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        /*   background: white; */
+        border-radius: 10px;
+        border: 2px solid var(--style-2-green, #57E8A2);
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+        color: var(--style-2-green, #57E8A2);
+        font-family: 'Poppins', sans-serif;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin-left: 40px;
+        background: white;
+
+
+
+        &:hover {
+            cursor: pointer;
+            color: white;
+            animation: button 0.2s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+
+
+
+        @keyframes button {
+            0% {
+                background: linear-gradient(124deg, rgba(87, 232, 162, 1) 0%, rgba(87, 232, 162, 1) 13%, rgba(87, 232, 162, 1) 17%, rgba(255, 255, 255, 1) 24%);
+            }
+
+            40% {
+                background: linear-gradient(124deg, rgba(87, 232, 162, 1) 0%, rgba(87, 232, 162, 1) 17%, rgba(87, 232, 162, 1) 27%, rgba(255, 255, 255, 1) 51%);
+            }
+
+            70% {
+                background: linear-gradient(124deg, rgba(87, 232, 162, 1) 0%, rgba(87, 232, 162, 1) 19%, rgba(87, 232, 162, 1) 49%, rgba(255, 255, 255, 1) 70%);
+                ;
+            }
+
+            100% {
+                transform: scale(1.1);
+                background: linear-gradient(124deg, rgba(87, 232, 162, 1) 50%, rgba(39, 122, 82, 1) 100%, rgba(255, 255, 255, 1) 100%, rgba(87, 232, 162, 1) 100%);
+            }
+        }
+
+    }
+
+    div {
+        width: 47%;
+
+
+
+        h3 {
+            color: var(--Black, #000);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            margin-left: 40px;
+        }
+
+        h1 {
+            color: var(--style-2-green, #57E8A2);
+            font-family: 'Baloo 2', sans-serif;
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 120%;
+            margin-left: 40px;
+
+        }
+
+        h2 {
+            color: var(--style-2-green, #57E8A2);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            margin-left: 40px;
+        }
+
+    }
+
+    img {
+        width: 100%;
+        height: 400px;
+        box-shadow: 4px 4px 10px -2px #000000;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-50px) scale(1.05);
+            transition: transform 0.2s ease;
+        }
+    }
+}
+
+
+
+.backgroundEllipseBig {
+    z-index: -5;
+    position: absolute;
+    left: -100px;
+    top: 100px;
+    height: 500px;
+}
+
+.backgroundEllipseMiddle {
+    z-index: -5;
+    position: absolute;
+    right: -100px;
+    top: 700px;
+    height: 400px;
+}
+
+.backgroundEllipseSmall {
+    z-index: -5;
+    position: absolute;
+    right: 400px;
+    top: 950px;
+    height: 70px;
+}
+
+@media(max-width:1000px) {
+    header {
+        div {
+            width: inherit;
+
+        }
+    }
+
+
+    .textDiv {
+        width: 100%;
+
+        h1 {
+            font-size: 70px;
+        }
+
+        div {
+            max-width: 100%;
+
+            p {
+                width: max-content
+            }
+        }
+    }
+
+    .project {
+        flex-direction: column !important;
+        height: fit-content;
+        margin-bottom: 130px;
+
+        div {
+            width: 100% !important;
+        }
+
+        button {
+            font-size: 16px;
+        }
+    }
+
+    .backgroundEllipseBig {
+        top: 20px;
+        height: 250px;
+    }
+
+    .backgroundEllipseMiddle {
+
+        height: 200px;
+    }
+
+    .backgroundEllipseSmall {
+
+        height: 150px;
+    }
+}
+
+
+@media (max-width:1300px) {
+    a {
+
+
+        img {
+            height: 20% !important;
+
+            &:hover {
+                transform: translateY(-5px) scale(1.05) !important;
+                transition: transform 0.2s ease;
+            }
+
+        }
+    }
+
+    .project {
+        align-items: center;
+
+    }
+}
+
+@media(max-width: 450px) {
+    h1 {
+        font-size: 56px !important;
+    }
+}
+
+@media(min-width:900px) and (min-height:600px) {
+    /*    .backgroundEllipseBig {
+        height: 25%;
+    } */
+
+    .backgroundEllipseMiddle {
+        height: 25%;
+    }
+}
+
+@media(max-width: 1300px) {
+    .backgroundEllipseBig {
+        height: 10% !important;
+    }
+}

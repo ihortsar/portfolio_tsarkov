@@ -1,0 +1,56 @@
+.privacy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #50DD99;
+    color: white;
+
+
+    p,
+    h1,
+    h2,
+    h3,
+    li {
+        color: white;
+        font-family: 'Baloo 2', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        margin-bottom: 15px;
+        letter-spacing: 0.96px;
+        margin-left: 20px;
+        text-align: start;
+        line-height: 1.5;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    li {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+
+}
+
+.close {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    cursor: pointer;
+}

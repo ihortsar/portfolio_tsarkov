@@ -1,0 +1,38 @@
+<h1>Contact</h1>
+<div class="contactContainer">
+    <div class="leftContact">
+        <h2>Got a problem to solve?</h2>
+        <span> Contact me through this form, I'm looking forward to hearing from you!</span>
+        <div>
+            <p>Need a Frontend developer?</p>
+            <h3>Contact me!</h3>
+        </div>
+        <div class="ellipseLeft">
+            <img class="ellipse" src="assets/img/Ellipse 9.png">
+        </div>
+        <img (click)="handleAnchor('header')" class="goUp" src="assets/img/goup.png">
+    </div>
+    <div class="rightContact">
+        <form (ngSubmit)="sendMail($event)">
+            <input class="input" [(ngModel)]="nameValue" (ngModelChange)="inputCheck(nameValue)" placeholder="Your name"
+                required name="name">
+            <input class="input" [(ngModel)]="emailValue" (ngModelChange)="inputCheck(emailValue)"
+                placeholder="Your email" required name="email">
+            <textarea [(ngModel)]="textValue" (ngModelChange)="inputCheck(textValue)" placeholder="Your message"
+                required name="message"></textarea>
+
+            <div class="checkbox-container">
+                <mat-checkbox> </mat-checkbox>
+                    I've read the<a routerLink="/privacy_policy" routerLinkActive="active">Privacy Policy</a> and agree
+                    to the processing of my data as outlined.
+               
+            </div>
+
+            <button [disabled]="buttonDisabled" [class.buttonEnabled]="!buttonDisabled" type="submit">Say
+                hello:)</button>
+
+        </form>
+
+    </div>
+
+</div>

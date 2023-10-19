@@ -1,0 +1,18 @@
+a {
+    margin-left: 40px;
+    color: var(--style-2-green, #57E8A2);
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 120%;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @media(max-width: 1100px) {
+        display: none;
+    }
+}
+
