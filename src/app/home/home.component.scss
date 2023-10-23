@@ -1,3 +1,13 @@
+.menu_mobile {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    z-index: 9999;
+    cursor: pointer;
+    height: 32px;
+}
+
 .menu {
     position: absolute;
     top: 23px;
@@ -15,18 +25,22 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    height: 80vh;
+    /*    height: 80vh; */
     display: flex;
     align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .skillsContainer {
     display: flex;
-    height: 80vh;
+    /*    height: 80vh; */
     width: 100%;
     background-color: var(--style-2-green, #57E8A2);
     display: flex;
     flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .footer {
@@ -117,12 +131,65 @@
 
 }
 
-@media(max-width:1100px) {
+@media(max-width:1100px) {}
+
+@media(min-height:2000px) {
     .menu_mobile {
         display: block;
         position: absolute;
         top: 15px;
-        right: 15px;
+        right: 25px;
         z-index: 9999;
+        cursor: pointer;
+        height: 80px;
+    }
+}
+
+.sentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.9;
+    z-index: 9999;
+    background-color: #000000;
+}
+
+.sent {
+
+
+    h1 {
+        font-family: 'Baloo 2', sans-serif;
+        color: white;
+        font-weight: 800;
+        font-size: 80px;
+    }
+}
+
+@media(min-width:300px) and (max-width:330px) {
+
+    .menu_mobile {
+        right: 15px;
+        height: 30px;
+    }
+}
+
+@media(min-width:900px) and (min-height:1700px) {
+    .menu_mobile {
+        right: 30px;
+        height: 80px;
+        top: 30px;
+    }
+}
+
+@media(max-height:700px) {
+    .menu_mobile {
+        right: 21px;
+        height: 20px;
+        top: 13px;
     }
 }

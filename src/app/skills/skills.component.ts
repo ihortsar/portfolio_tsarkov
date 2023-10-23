@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class SkillsComponent {
 
-  skillFrames1 = ['Frame 6.png', 'Frame 7.png', 'Frame 8.png', 'Frame 9.png', 'Frame 10.png']
-  skillFrames2 = ['Frame 11.png', 'Frame 12.png', 'Frame 13.png', 'Frame 14.png', 'Frame 15.png']
+  skillFrames1 = ['Frame 6.png', 'Frame 14.png', 'Frame 12.png', 'Frame 9.png', 'Frame 7.png']
+  skillFrames2 = ['Frame 11.png', 'Frame 8.png', 'Frame 13.png', 'Frame 10.png', 'Frame 15.png',]
 }

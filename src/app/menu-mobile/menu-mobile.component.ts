@@ -1,4 +1,4 @@
-import { ViewportScroller } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { HomeComponent } from '../home/home.component';
 
@@ -8,11 +8,8 @@ import { HomeComponent } from '../home/home.component';
   styleUrls: ['./menu-mobile.component.scss']
 })
 export class MenuMobileComponent {
-  constructor(private viewportScroller: ViewportScroller, public home: HomeComponent) { }
+  constructor( public home: HomeComponent) { }
 
-  public handleAnchor(elementId: string): void {
-    this.viewportScroller.scrollToAnchor(elementId);
-  }
 
   closeDialog() {
     this.home.menuOpen = false

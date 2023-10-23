@@ -10,22 +10,27 @@
         <div class="ellipseLeft">
             <img class="ellipse" src="assets/img/Ellipse 9.png">
         </div>
-        <img (click)="handleAnchor('header')" class="goUp" src="assets/img/goup.png">
+        <a href="#header"><img class="goUp" src="assets/img/goup.png"></a>
     </div>
     <div class="rightContact">
         <form (ngSubmit)="sendMail($event)">
             <input class="input" [(ngModel)]="nameValue" (ngModelChange)="inputCheck(nameValue)" placeholder="Your name"
                 required name="name">
             <input class="input" [(ngModel)]="emailValue" (ngModelChange)="inputCheck(emailValue)"
-                placeholder="Your email" required name="email">
+                placeholder="Your email" required name="email" type="email">
             <textarea [(ngModel)]="textValue" (ngModelChange)="inputCheck(textValue)" placeholder="Your message"
                 required name="message"></textarea>
 
             <div class="checkbox-container">
-                <mat-checkbox> </mat-checkbox>
+                <label class="control control-checkbox">
                     I've read the<a routerLink="/privacy_policy" routerLinkActive="active">Privacy Policy</a> and agree
                     to the processing of my data as outlined.
-               
+                    <input (click)="inputChecked()" [(ngModel)]="isChecked" (ngModelChange)="inputCheck(emailValue)"
+                        type="checkbox" name="checkbox" />
+                    <div class="control_indicator"></div>
+                </label>
+
+
             </div>
 
             <button [disabled]="buttonDisabled" [class.buttonEnabled]="!buttonDisabled" type="submit">Say

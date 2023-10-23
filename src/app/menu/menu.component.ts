@@ -1,5 +1,6 @@
+
 import { Component } from '@angular/core';
-import { AppComponent } from '../app.component';
+
 
 
 
@@ -8,8 +9,6 @@ import { AppComponent } from '../app.component';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent extends AppComponent {
-
-
+export class MenuComponent {
 
 }

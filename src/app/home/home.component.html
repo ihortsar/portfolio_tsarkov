@@ -6,4 +6,9 @@
 <app-my-works class="myWorks" id="my-works"></app-my-works>
 <app-contact id="contact"></app-contact>
 <app-footer class="footer"></app-footer>
+<div class="displayNone" [ngClass]="{'sentContainer':sent}">
+    <div class="sent">
+        <h1>Sent</h1>
+    </div>
+</div>
 <app-menu-mobile [ngClass]="menuOpen ? 'dialog' : 'displayNone'"></app-menu-mobile>

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -11,13 +12,4 @@ import { ViewportScroller } from '@angular/common';
 export class AppComponent {
   title = 'portfolio_tsarkov';
 
-
-  constructor(public viewportScroller: ViewportScroller) { }
-
-
-  public handleAnchor(elementId: string): void {
-    this.viewportScroller.scrollToAnchor(elementId);
-    console.log(elementId);
-    
-  }
 }
